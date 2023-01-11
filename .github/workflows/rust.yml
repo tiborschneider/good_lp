@@ -20,7 +20,7 @@ jobs:
           sudo apt-get install coinor-cbc coinor-libcbc-dev
           rustup component add rustfmt
       - name: Build
-        run: cargo build --all-features --tests
+        run: cargo build --all-features --tests --verbose
       - name: Run tests # test on a single thread. See: https://github.com/KardinalAI/coin_cbc/issues/9
         run: cargo test --all-features -- --test-threads=1
       - name: Run tests with minilp
